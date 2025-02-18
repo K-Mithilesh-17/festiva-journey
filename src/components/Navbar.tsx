@@ -28,39 +28,43 @@ const Navbar = () => {
         animate={{ y: 0 }}
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/80 backdrop-blur-md shadow-sm"
+            ? "bg-white/80 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <a href="#" className="text-2xl font-bold text-festival-900">
-              CollageFest
-            </a>
+          <div className="flex items-center justify-between h-20">
+            <motion.a
+              href="#"
+              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600"
+              whileHover={{ scale: 1.05 }}
+            >
+              DHANUSH
+            </motion.a>
 
-            {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
+                <motion.a
                   key={item.label}
                   href={item.href}
-                  className="text-festival-800 hover:text-festival-600 transition-colors"
+                  className="text-purple-800 hover:text-purple-600 transition-colors relative group"
+                  whileHover={{ scale: 1.05 }}
                 >
                   {item.label}
-                </a>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full" />
+                </motion.a>
               ))}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-festival-900 text-white px-6 py-2 rounded-lg hover:bg-festival-800 transition-colors"
+                className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/20"
               >
                 Get Tickets
               </motion.button>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-festival-900"
+              className="md:hidden text-purple-900"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg
@@ -83,36 +87,47 @@ const Navbar = () => {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 md:hidden"
           >
-            <div className="absolute inset-0 bg-black/20" onClick={() => setIsMobileMenuOpen(false)} />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-black/20"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
             <motion.div
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 20 }}
               className="absolute right-0 top-0 h-full w-64 bg-white shadow-xl"
             >
               <div className="p-6 space-y-6">
                 {navItems.map((item) => (
-                  <a
+                  <motion.a
                     key={item.label}
                     href={item.href}
-                    className="block text-festival-800 hover:text-festival-600 transition-colors"
+                    className="block text-purple-800 hover:text-purple-600 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
+                    whileHover={{ x: 10 }}
                   >
                     {item.label}
-                  </a>
+                  </motion.a>
                 ))}
-                <button className="w-full bg-festival-900 text-white px-6 py-2 rounded-lg hover:bg-festival-800 transition-colors">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/20"
+                >
                   Get Tickets
-                </button>
+                </motion.button>
               </div>
             </motion.div>
           </motion.div>
