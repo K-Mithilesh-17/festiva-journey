@@ -7,15 +7,15 @@ const Gallery = () => {
 
   const images = [
     {
-      url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
+      url: "https://images.unsplash.com/photo-1615729947596-a598e5de0ab3",
       title: "Cultural Performances"
     },
     {
-      url: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3",
+      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
       title: "Dance Competitions"
     },
     {
-      url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819",
+      url: "https://images.unsplash.com/photo-1518495973542-4542c06a5843",
       title: "Music Events"
     },
     {
@@ -33,7 +33,7 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="py-20 bg-purple-50" id="gallery">
+    <section className="py-20 bg-green-50" id="gallery">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,10 +42,10 @@ const Gallery = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 mb-4">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600 mb-4">
             Event Gallery
           </h2>
-          <p className="text-purple-700 max-w-2xl mx-auto">
+          <p className="text-green-700 max-w-2xl mx-auto">
             Glimpses of the magic that awaits you at DHANUSH
           </p>
         </motion.div>

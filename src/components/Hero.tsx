@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-purple-50 to-purple-100">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-green-50 to-green-100">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-200/30 to-pink-300/30 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-200/30 to-emerald-300/30 backdrop-blur-sm" />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}
           transition={{ duration: 1 }}
-          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30')] bg-cover bg-center"
+          className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1615729947596-a598e5de0ab3')] bg-cover bg-center"
         />
       </div>
       
@@ -25,18 +25,18 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-block px-6 py-2 mb-4 text-lg bg-purple-600 text-white rounded-full font-medium"
+            className="inline-block px-6 py-2 mb-4 text-lg bg-green-600 text-white rounded-full font-medium"
           >
             March 5-6, 2025
           </motion.span>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600">
             DHANUSH
           </h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl text-purple-800 mb-8 max-w-2xl mx-auto"
+            className="text-xl md:text-2xl text-green-800 mb-8 max-w-2xl mx-auto"
           >
             The Grand Event of DHANAKULA - Where Talent Meets Tradition
           </motion.p>
@@ -49,14 +49,14 @@ const Hero = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/20"
+              className="bg-green-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-green-700 transition-colors shadow-lg shadow-green-500/20"
             >
               Get Tickets
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-purple-50 transition-colors border-2 border-purple-600 shadow-lg shadow-purple-500/10"
+              className="bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-green-50 transition-colors border-2 border-green-600 shadow-lg shadow-green-500/10"
             >
               View Schedule
             </motion.button>
@@ -71,7 +71,7 @@ const Hero = () => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
       >
         <svg
-          className="w-6 h-6 text-purple-600"
+          className="w-6 h-6 text-green-600"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"

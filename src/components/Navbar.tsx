@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             <motion.a
               href="#"
-              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600"
+              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600"
               whileHover={{ scale: 1.05 }}
             >
               DHANUSH
@@ -47,24 +47,24 @@ const Navbar = () => {
                 <motion.a
                   key={item.label}
                   href={item.href}
-                  className="text-purple-800 hover:text-purple-600 transition-colors relative group"
+                  className="text-green-800 hover:text-green-600 transition-colors relative group"
                   whileHover={{ scale: 1.05 }}
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full" />
                 </motion.a>
               ))}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/20"
+                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors shadow-lg shadow-green-500/20"
               >
                 Get Tickets
               </motion.button>
             </div>
 
             <button
-              className="md:hidden text-purple-900"
+              className="md:hidden text-green-900"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg
@@ -114,7 +114,7 @@ const Navbar = () => {
                   <motion.a
                     key={item.label}
                     href={item.href}
-                    className="block text-purple-800 hover:text-purple-600 transition-colors"
+                    className="block text-green-800 hover:text-green-600 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                     whileHover={{ x: 10 }}
                   >
@@ -124,7 +124,7 @@ const Navbar = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/20"
+                  className="w-full bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors shadow-lg shadow-green-500/20"
                 >
                   Get Tickets
                 </motion.button>
