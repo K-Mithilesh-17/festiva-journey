@@ -42,7 +42,7 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/a4718c2a-f64c-46e6-b3f0-b0910253ccf0.png" 
                 alt="DHANUSH Logo" 
-                className="h-12 w-auto"
+                className="h-12 w-auto mix-blend-multiply"
               />
             </motion.a>
 
@@ -51,17 +51,17 @@ const Navbar = () => {
                 <motion.a
                   key={item.label}
                   href={item.href}
-                  className="text-dhanush-navy hover:text-dhanush-green transition-colors relative group"
+                  className="text-dhanush-navy hover:text-dhanush-gold transition-colors relative group"
                   whileHover={{ scale: 1.05 }}
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-dhanush-green transition-all group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-dhanush-gold transition-all group-hover:w-full" />
                 </motion.a>
               ))}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-dhanush-green text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors shadow-lg shadow-green-500/20"
+                className="bg-dhanush-navy text-white px-6 py-2 rounded-lg hover:bg-dhanush-navy/90 transition-colors shadow-lg shadow-dhanush-navy/20"
               >
                 Get Tickets
               </motion.button>
@@ -119,7 +119,7 @@ const Navbar = () => {
                   <motion.a
                     key={item.label}
                     href={item.href}
-                    className="block text-green-800 hover:text-green-600 transition-colors"
+                    className="block text-dhanush-navy hover:text-dhanush-gold transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                     whileHover={{ x: 10 }}
                   >
@@ -129,7 +129,7 @@ const Navbar = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors shadow-lg shadow-green-500/20"
+                  className="w-full bg-dhanush-navy text-white px-6 py-2 rounded-lg hover:bg-dhanush-navy/90 transition-colors shadow-lg shadow-dhanush-navy/20"
                 >
                   Get Tickets
                 </motion.button>
