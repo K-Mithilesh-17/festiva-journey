@@ -28,7 +28,7 @@ const Navbar = () => {
         animate={{ y: 0 }}
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/80 backdrop-blur-md shadow-lg"
+            ? "bg-white/90 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
       >
@@ -36,10 +36,14 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-20">
             <motion.a
               href="#"
-              className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600"
+              className="flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
             >
-              DHANUSH
+              <img 
+                src="/lovable-uploads/a4718c2a-f64c-46e6-b3f0-b0910253ccf0.png" 
+                alt="DHANUSH Logo" 
+                className="h-12 w-auto"
+              />
             </motion.a>
 
             <div className="hidden md:flex items-center space-x-8">
@@ -47,24 +51,24 @@ const Navbar = () => {
                 <motion.a
                   key={item.label}
                   href={item.href}
-                  className="text-green-800 hover:text-green-600 transition-colors relative group"
+                  className="text-dhanush-navy hover:text-dhanush-green transition-colors relative group"
                   whileHover={{ scale: 1.05 }}
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-600 transition-all group-hover:w-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-dhanush-green transition-all group-hover:w-full" />
                 </motion.a>
               ))}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors shadow-lg shadow-green-500/20"
+                className="bg-dhanush-green text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors shadow-lg shadow-green-500/20"
               >
                 Get Tickets
               </motion.button>
             </div>
 
             <button
-              className="md:hidden text-green-900"
+              className="md:hidden text-dhanush-navy"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg
@@ -87,6 +91,7 @@ const Navbar = () => {
         </div>
       </motion.nav>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
